@@ -1,0 +1,87 @@
+<!-- akin to the "index" view for patients -->
+<p id="notice"><%= notice %></p>
+
+<h3 align="left"><b>Discharge Checklists</b> </h3>
+<p><i>-MD View, <%= @service.name %>-</i></p>
+<p align = "right"><i> for d/c tomorrow: <%= Date.tomorrow().to_formatted_s(:iso8601) %>  </i></p>
+
+<table class="table table-hover" class="table table-condensed">
+  <thead>
+    <tr>
+      <th>New</th>
+      <th></th>
+      <th>Room</th>
+      <th>Patient (FL)</th>
+      <!--<th>Est. d/c date</th>-->
+      <!--<th>SW tasks</th>-->
+      <!--<th>PT tasks</th>-->
+      <!--<th>Pharmacy tasks</th>-->
+      <th>MD to-do:</th>
+      <th>PT rec:</th>
+      <th colspan="1"></th>
+      <!--<th>Leave note for d/c huddle</th>-->
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @service.patients.order(:room).each do |patient| %>
+      <% if patient.active? == true %>
+      <tr>
+        <td><%= "*" unless patient.completedbymd == true %></td>
+        <td><%= link_to '', edit_patient_path(patient), class:"glyphicon glyphicon-edit" %></td>
+        
+        <td><%= patient.room %></td>
+        <td><%= patient.initials %></td>
+        <!--<td><%= patient.estimatedate %></td>-->
+        <td><% if patient.completedbymd == true %>
+
+        <% if patient.ptnotified == false %>
+        [ ] Tell pt about d/c at noon
+        <br>
+        <% end  %>
+        <% if patient.dcsumm == false %>
+        [ ] D/c summary
+        <br>
+        <% end  %>
+        <% if patient.medrec == false %>
+        [ ] Update med rec
+        <br>
+        <% end  %>
+
+        <% if patient.appt == false %>
+        [ ] Schedule f/u appt
+        <br>
+        <% end  %>
+        <% if patient.amlabs == false %>
+        [ ] @10pm - put in AM labs for tomorrow
+        <br>
+        <% end  %>    
+        <% if patient.ptorder == false %>
+        [ ] Put in PT order
+        <br>
+        <% end  %>
+        <% end %>
+        </td>
+        
+        <td><%= patient.ptrec %></td>
+        
+        
+        
+        <td><%= link_to '', patient, method: :delete, data: { confirm: 'Are you sure?' }, class:"glyphicon glyphicon-trash" %></td>
+        
+        <!--<td>
+                <div class="btn-group" role="group" aria-label="...">
+            <a href="/leaveNote" class="btn btn-default btn-xs" >Add</button>
+            </td>-->
+
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<!--<%= link_to '', services_path,  class:"glyphicon glyphicon-home" %>-->
+

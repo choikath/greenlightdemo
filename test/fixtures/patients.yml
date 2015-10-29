@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  room: MyString
+  initials: MyString
+  estimatedate: MyText
+  ptnotified: false
+  dcsumm: false
+  medrec: false
+  appt: false
+  amlabs: false
+  ptorder: false
+  homeo2: false
+  tubefeeds: false
+  walker: false
+  otherequip: false
+  homecare: false
+  snfpsych: false
+  transport: false
+  teaching: false
+  finassit: false
+  conciergerx: false
+  completedbymd: false
+
+two:
+  room: MyString
+  initials: MyString
+  estimatedate: MyText
+  ptnotified: false
+  dcsumm: false
+  medrec: false
+  appt: false
+  amlabs: false
+  ptorder: false
+  homeo2: false
+  tubefeeds: false
+  walker: false
+  otherequip: false
+  homecare: false
+  snfpsych: false
+  transport: false
+  teaching: false
+  finassit: false
+  conciergerx: false
+  completedbymd: false

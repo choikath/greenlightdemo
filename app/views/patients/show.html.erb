@@ -1,0 +1,149 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Checklist items needed:</h3></h1>
+
+<p>
+  <strong>Room:</strong>
+  <%= @patient.room %>
+</p>
+
+<p>
+  <strong>Initials:</strong>
+  <%= @patient.initials %>
+</p>
+
+<p>
+  <strong>Estimated date of discharge per md:</strong>
+  <%= @patient.estimatedate %>
+</p>
+
+<p>
+  <%= if @patient.ptnotified==false 
+  "[ ] Pt notified d/c is planned for noon"
+  end
+  %>
+</p>
+
+<p>
+  <%= if @patient.dcsumm ==false 
+  "[ ] d/c summary"
+  end
+  %>
+</p>
+
+<p>
+  <%= if @patient.medrec==false 
+  "[ ] Med rec"
+  end
+  %>
+</p>
+
+<p>
+  <%= if @patient.appt==false
+  "[ ] Schedule post d/c appt"
+  end
+  %>
+</p>
+
+<p>
+  <%= if @patient.amlabs == true
+  "[ ] Put in labs for tomorrow morning @ 10pm today"  
+end
+  %>
+</p>
+
+<p>
+  <%= if @patient.ptorder == false 
+  "[ ] PT order placement"
+  end
+  %>
+  
+</p>
+
+<p>
+  <%= if @patient.homeo2 == true 
+  "[ ] Home O2"
+  end
+  %>
+</p>
+
+<p>
+  <%= if @patient.tubefeeds == true
+  "[ ] Tube feeds"
+  end
+  %>
+</p>
+
+<p>
+  <%= if @patient.walker == true
+  "[ ] Walker"
+  end
+  %>
+</p>
+
+<p>
+  <%= if @patient.otherequip == true
+  "[ ] Other medical equipment"
+  end
+  %>
+</p>
+
+<p>
+  <%= if @patient.homecare == true
+  "[ ] Home care"
+  end
+  %>
+</p>
+
+<p>
+  <%= if @patient.snfpsych == true
+  "[ ] SNF/psych/rehab needed (alcohol/drugs)"
+  end
+  %>
+</p>
+
+<p>
+  <%= if @patient.transport == true
+  "[ ] Transportation"
+  end
+  %>
+</p>
+
+<p>
+  <%= if @patient.teaching == true
+  "[ ] Medication teaching"
+  end
+  %>
+</p>
+
+<p>
+  <%= if @patient.finassit == true
+  "[ ] Medication financial assistance"
+  end
+  %>
+</p>
+
+<p>
+  <%= if @patient.conciergerx == true
+  "[ ] Concierge pharmacy"
+  end
+  %>
+</p>
+
+<p>
+  <%= if @patient.completedbymd == true
+  "checklist completed by MD at: " + "#{ @patient.updated_at.to_formatted_s(:short) }"
+  end
+  %>
+</p>
+
+<button type="button" class="btn btn-default">
+  <a href = "<%= edit_patient_path(@patient) %>", class="glyphicon glyphicon-edit"></a>
+</button>
+<button type="button" class="btn btn-success">
+  <a href= "<%= patients_path %>", class="glyphicon glyphicon-home"></a>
+</button>
+<%= link_to 'Add Another Patient', new_patient_path, class: "btn btn-info" %>
+
+
+

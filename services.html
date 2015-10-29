@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>D/C Checklist</title>
+  
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap.js"></script>
+    
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="css/creative.css" type="text/css">
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+</head>
+<body>
+<div class= "container">
+
+
+     <h3 align="left"><b>Greenlight Patients</b></h3>
+<p><i>-MD View, All Services-</i></p>
+    <p align = "right"><i>for d/c tomorrow: </i><i id="myDate" ></i></p>
+    <script>
+    var d = new Date(); document.getElementById("myDate").innerHTML = d.toDateString();
+    </script> 
+
+
+<table class="table table-hover" class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Service Name</th>
+      <th>Resident</th>
+      <!--<th>Est. date of d/c (per MD)</th>-->
+      <th>Patient Checklists</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+          <td>PPMC Teaching A</td>
+          <td></td>
+          <td><a href="teachinga.html">3 Patients</a></td>
+      </tr>
+      <tr>
+          <td>PPMC Teaching B</td>
+          <td></td>
+          <td><a href="teachingb.html">2 Patients</a></td>
+      </tr>
+      <tr>
+          <td>PPMC Teaching C</td>
+          <td></td>
+          <td><a href="emptyservice.html">0 Patients</a></td>
+      </tr>
+      <tr>
+          <td>PPMC Teaching D</td>
+          <td></td>
+          <td><a href="teachingd.html">1 Patients</a></td>
+      </tr>
+      <tr>
+          <td>PPMC Hospitalist A</td>
+          <td></td>
+          <td><a href="emptyservice.html">0 Patients</a></td>
+      </tr>
+      <tr>
+          <td>PPMC Hospitalist B</td>
+          <td></td>
+          <td><a href="emptyservice.html">0 Patients</a></td>
+      </tr>
+      <tr>
+          <td>PPMC Family Medicine</td>
+          <td></td>
+          <td><a href="fammed.html">0 Patients</a></td>
+      </tr>
+      
+  </tbody>
+</table>
+
+    
+    
+
+<br>
+
+      
+      
+</div>
+
+
+
+<!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+
+</body>
+</html>

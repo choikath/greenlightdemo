@@ -1,0 +1,145 @@
+<p id="notice"><%= notice %></p>
+
+<h3 align="left"><b>Greenlight Patients</b></h3>
+<p><i>-Cupp4S Staff View, All Patients-</i> &nbsp&nbsp&nbsp&nbsp&nbsp <i> <%= link_to '(MD view by service)', services_path, class: "btn btn-default" %></i></p>
+<p align = "right"><i> for d/c tomorrow: <%= Date.tomorrow().to_formatted_s(:iso8601) %>  </i></p>
+
+
+<table class="table table-hover" class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Room</th>
+      <th>Patient (FL)</th>
+      <!--<th>Est. date of d/c (per MD)</th>-->
+      <th>MD done?</th>
+      <th>CRC:</th>
+      <th>SW:</th>
+      <th>Pharm:</th>
+      <th>MD:</th>
+      <th>Note from MD:</th>
+      <th colspan="2"></th>
+      <!--<th>Leave note for d/c huddle</th>-->
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @patients.order(:room).each do |patient| %>
+      <% if patient.active? == true %>
+      <tr>
+        <td><%= patient.room %></td>
+        <td><%= patient.initials %></td>
+        <!--<td><%= patient.estimatedate %></td>-->
+        <td><%= if patient.completedbymd ==true
+         "Y"
+        end
+        %></td>
+        
+        
+        <!--//-- CRC tasks --//-->
+        <td>
+        <% if patient.homeo2 == true %>
+        [ ] Home O2
+        <br>
+        <% end %>
+        <% if patient.tubefeeds == true %>
+        [ ] Tube feeds
+        <br>
+        <% end  %>
+        <% if patient.walker == true %>
+        [ ] Walker
+        <br>
+        <% end  %>
+        <% if patient.otherequip == true %>
+        [ ] Other medical equipment
+        <br>
+        <% end  %>
+        <% if patient.homecare == true %>
+        [ ] Home care
+        <br>
+        <% end %>
+        <% if patient.transport == true %>
+        [ ] Transportation
+        <br>
+        <% end  %>
+        </td>
+        
+        <!--//-- SW tasks --//-->
+        <td>
+        <% if patient.snfpsych == true %>
+        [ ] SNF/Psych/Rehab
+        <% end %>
+        </td>
+
+        <!--//-- Pharmacy tasks --//-->
+        <td>
+        <% if patient.teaching == true %>
+        [ ] Med teaching
+        <br>
+        <% end %>
+        <% if patient.finassit == true %>
+        [ ] Med financial assistance
+        <br>
+        <% end %>
+        <% if patient.conciergerx == true %>
+        [ ] Rx for concierge pharmacy service
+        <br>
+        <% end %>
+        </td>
+        
+        
+        <!--//-- MD tasks --//-->
+        <td><% if patient.completedbymd == true %>
+        <% if patient.ptnotified == false %>
+        [ ] Tell pt about d/c at noon
+        <br>
+        <% end  %>
+        <% if patient.dcsumm == false %>
+        [ ] D/c summary
+        <br>
+        <% end  %>
+        <% if patient.medrec == false %>
+        [ ] Update med rec
+        <br>
+        <% end  %>
+        <% if patient.appt == false %>
+        [ ] Schedule f/u appt
+        <br>
+        <% end  %>
+        <% if patient.amlabs == false %>
+        [ ] @10pm - put in AM labs for tomorrow
+        <br>
+        <% end  %>    
+        <% if patient.ptorder == false %>
+        [ ] Put in PT order
+        <% end  %>
+        </td>
+        <% end  %>
+        
+        <td><%= patient.noteToStaff %></td>
+        <!--<td><%= link_to 'View', patient %></td>-->
+        <td><%= link_to '', edit_patient_path(patient), class:"glyphicon glyphicon-edit" %></td>
+        <td><%= link_to '', patient, method: :delete, data: { confirm: 'Are you sure?' }, class:"glyphicon glyphicon-trash" %></td>
+        <!--<td>
+                <div class="btn-group" role="group" aria-label="...">
+            <a href="/leaveNote" class="btn btn-default btn-xs" >Add</button>
+            -->
+
+        </td>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<p align = "right"><%= link_to 'Clear List', 'clear_all', data: { confirm: 'Are you sure? This clears the entire list.' } %></p>
+        
+
+
+<br>
+
+<%= link_to 'Add Patient Entry', new_patient_path, class:"btn btn-info" %>
+
+<p><br></p>
+
+ 

@@ -1,0 +1,132 @@
+<%= form_for(@patient) do |f| %>
+  <% if @patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patient.errors.count, "error") %> prohibited this patient entry from being saved:</h2>
+
+      <ul>
+      <% @patient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<table>
+
+    <div class="field">
+    <%= f.label :room %><br>
+    <%= f.text_field :room %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :"Patient initials (FL)" %><br>
+    <%= f.text_field :initials %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :"Service Name" %><br>
+    <%= f.select(:service_id, [['PPMC Teaching A', 1], ['PPMC Teaching B',2], ['PPMC Teaching C',3], ['PPMC Teaching D', 4], ['PPMC Hospitalist A',5], ['PPMC Hospitalist B', 6], ['PPMC Family Medicine', 7]]) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :"PT rec" %><br>
+    <%= f.text_field :ptrec %>
+  </div>
+  
+<br>
+
+
+</table>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">MD tasks:</div>
+  <div class="panel-body">
+  
+
+
+  <div class="field">
+    <%= f.label :"Estimated date of discharge?" %><br>
+    <p>ex: Today, Tomorrow, 2+ days, 8/1/15, day after OR date, etc</p>
+    <%= f.text_area :estimatedate %>
+  </div>
+  
+  <div class="field">
+    <%= f.check_box :ptnotified %> <%= f.label :"Patient notified about noon d/c time"  %><br>
+  </div>
+  <div class="field">
+    <%= f.check_box :dcsumm %> <%= f.label "D/c summary in progress" %><br>
+    
+  </div>
+  <div class="field">
+    <%= f.check_box :medrec %> <%= f.label :"Med rec in progress" %><br>
+  </div>
+  <div class="field">
+    <%= f.check_box :appt %> <%= f.label :"Post-discharge appointment scheduled" %>
+
+  </div>
+  <div class="field">
+    <%= f.check_box :amlabs %> <%= f.label :"Are morning labs due for medical clearance? Then I will place a one-time order @10pm" %><br>
+  </div>
+  <div class="field">
+    <%= f.check_box :ptorder %> <%= f.label :"P/T order in" %><br>
+    
+  </div>
+  
+  </div>
+  </div>
+
+  
+  <div class="panel panel-default">
+  <div class="panel-heading">Patient also needs:</div>
+  <div class="panel-body">
+    
+  <div class="field">
+    <%= f.check_box :homeo2 %> <%= f.label :"Home O2"%><br>
+  </div>
+  <div class="field">
+    <%= f.check_box :tubefeeds %> <%= f.label :"Tube feeds" %><br>
+  </div>
+  <div class="field">
+    <%= f.check_box :walker %> <%= f.label :"Walker" %><br>
+  </div>
+  <div class="field">
+    <%= f.check_box :otherequip %> <%= f.label :"Other Medical Equipment" %><br>
+    
+  </div>
+  <div class="field">
+    <%= f.check_box :homecare %> <%= f.label :"Home care" %><br>
+  </div>
+  <div class="field">
+     <%= f.check_box :snfpsych %> <%= f.label :"SNF/Psych/Rehab" %><br>
+  </div>
+  <div class="field">
+    <%= f.check_box :transport %> <%= f.label :"Transportation" %><br>
+  </div>
+  <div class="field">
+    <%= f.check_box :teaching %> <%= f.label :"Med teaching" %><br>
+  </div>
+  <div class="field">
+    <%= f.check_box :finassit %> <%= f.label :"Medication financial assistance" %><br>
+  </div>
+  <div class="field">
+    <%= f.check_box :conciergerx %> <%= f.label :"Will prescriptions be filled by concierge pharmacy service?" %><br>
+  </div>
+  <div class="field">
+     <%= f.label :"Other notes or updates for d/c staff:" %>
+     <p><%= f.text_area :noteToStaff %></p>
+  </div>
+  </div></div>
+  
+  <div class="field">
+    <%= f.check_box :completedbymd %> <%= f.label :"Completed by MD?" %><br>
+
+
+  
+  
+    <div class="actions">
+    <%= f.submit "Save", class:"btn btn-warning"%>
+  </div>
+  
+  
+<% end %>

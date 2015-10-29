@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h3 align="left"><b>Greenlight Patients</b> </h3>
+<p><i>-MD View, All Services-</i></p>
+<p align = "right"><i> for d/c tomorrow: <%= Date.tomorrow().to_formatted_s(:iso8601) %>  </i></p>
+
+<table class="table table-hover" class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Service Name</th>
+      <th>Resident</th>
+      <th colspan="1">Patient Checklists</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @services.each do |service| %>
+      <tr>
+        <td><%= service.name %></td>
+        <td><%= service.resident %></td>
+        <td><%= link_to " #{ (Patient.where(service_id: service.id, active?:true)).count } Patients", service %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

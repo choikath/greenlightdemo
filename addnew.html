@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>D/C Checklist</title>
+  
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap.js"></script>
+    
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="css/creative.css" type="text/css">
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+</head>
+<body>
+<div class= "container">
+    <h3> New Patient </h3>
+<p><font color="#ffab0c"><i>In demo version, new patient entry cannot be saved onto backend database.  <br>In practice, Room, Patient initials, Service name, and any PT recs are filled out by discharge staff, then saved.</i></font></p>
+
+    <form>
+    <p><b>Room</b><br>
+        <input type = "text" name= "room">
+    </p>
+    <p><b>Patient initials (fl)</b><br>
+        <input type = "text" name= "ptname">
+    </p>
+    <p><b>Service name</b><br>
+    <select name="Servicenames">
+        <option value= "ppmcA">PPMC Teaching A</option>
+        <option value= "ppmcB">PPMC Teaching B</option>
+        <option value= "ppmcC">PPMC Teaching C</option>
+        <option value= "ppmcD">PPMC Teaching D</option>
+        <option value= "ppmchA">PPMC Hospitalist A</option>
+        <option value= "ppmchB">PPMC Hospitalist B</option>
+        <option value= "ppmcFM">PPMC Family Medicine</option>
+        </select>    
+    </p>
+    <p><b>PT rec</b><br>
+        <input type = "text" name= "PTrec">
+    </p>
+
+  
+  
+<br>
+
+
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">MD tasks:</div>
+  <div class="panel-body">
+  
+
+
+
+    <p><b>Estimated date of discharge?</b><p>ex: Today, Tomorrow, 2+ days, 8/1/15, day after OR date, etc</p><br>
+      <textarea name= "dod" rows="2" cols="23"></textarea>
+    </p>
+      
+    <p><b>
+    <input type="checkbox" name="a" value="dc">  Patient notified about noon d/c time
+          </b></p>
+      <p><b>
+    <input type="checkbox" name="a" value="dc">  D/c summary in progress
+          </b></p>
+      <p><b>
+    <input type="checkbox" name="a" value="dc">  Med rec in progress
+          </b></p>
+      <p><b>
+    <input type="checkbox" name="a" value="dc">  Post-discharge appointment scheduled
+          </b></p>
+      <p><b>
+    <input type="checkbox" name="a" value="dc">  Are morning labs due for medical clearance?
+          </b></p>
+      <p><b>
+    <input type="checkbox" name="a" value="dc">  P/t order in
+          </b></p>
+  
+    
+
+  
+  </div>
+  </div>
+
+  
+  <div class="panel panel-default">
+  <div class="panel-heading">Patient also needs:</div>
+  <div class="panel-body">
+    
+ 
+      
+      
+    <p><b>
+    <input type="checkbox" name="a" value="dc">  Home o2
+          </b></p>
+      <p><b>
+    <input type="checkbox" name="a" value="dc">  Tube feeds
+          </b></p>
+      <p><b>
+    <input type="checkbox" name="a" value="dc">  Walker
+          </b></p>
+      <p><b>
+    <input type="checkbox" name="a" value="dc">  Other medical equipment
+          </b></p>
+      <p><b>
+    <input type="checkbox" name="a" value="dc">  Home care
+          </b></p>
+      <p><b>
+    <input type="checkbox" name="a" value="dc">  Snf/psych/rehab
+          </b></p>
+            <p><b>
+    <input type="checkbox" name="a" value="dc">  Transportation
+          </b></p>
+            <p><b>
+    <input type="checkbox" name="a" value="dc">  Med teaching
+          </b></p>
+            <p><b>
+    <input type="checkbox" name="a" value="dc">  Medical financial assistance
+          </b></p>
+            <p><b>
+    <input type="checkbox" name="a" value="dc">  Will prescriptions be filled by concierge pharmacy service?
+          </b></p>
+      
+      <p><b>Other notes or updates for d/c staff:</p><br>
+      <textarea name= "dod" rows="2" cols="23"></textarea>
+    </p>
+      
+      
+      
+      
+      
+  </div></div>
+  
+      <p><b>
+    <input type="checkbox" name="a" value="dc">  Completed by md?
+          </b></p>
+  
+
+        <a class="btn btn-warning" href="saveone.html">Save</a>
+  <p>
+  <br>  
+ <a class="glyphicon glyphicon-home" href="index.html"></a>   
+    </p>
+
+
+
+<!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+
+</body>
+</html>
+

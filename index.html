@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>D/C Checklist</title>
+  
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap.js"></script>
+    
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+</head>
+<body>
+<div class= "container">
+
+    <h3 align="left"><b>Greenlight Patients (DEMO)</b></h3>
+<p><i>-Cupp4S Staff View, All Patients-</i> &nbsp&nbsp&nbsp&nbsp&nbsp <i> <a class="btn btn-default" href="services.html">(MD view by service)</a></i></p>
+    <p align = "right"><i>for d/c tomorrow: </i><i id="myDate" ></i></p>
+    <script>
+    var d = new Date(); document.getElementById("myDate").innerHTML = d.toDateString();
+    </script> 
+
+
+<table class="table table-hover" class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Room</th>
+      <th>Patient (FL)</th>
+      <!--<th>Est. date of d/c (per MD)</th>-->
+      <th>MD done?</th>
+      <th>CRC:</th>
+      <th>SW:</th>
+      <th>Pharm:</th>
+      <th>MD:</th>
+      <th>Note from MD:</th>
+      <th colspan="2"></th>
+      <!--<th>Leave note for d/c huddle</th>-->
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td>400</td>
+        <td>YO</td>
+        <!--<td><%= patient.estimatedate %></td>-->
+        <td>"Y"</td>
+        
+        
+        <!--//-- CRC tasks --//-->
+        <td>
+        </td>
+        
+        <!--//-- SW tasks --//-->
+        <td>
+        [ ] SNF/Psych/Rehab
+        </td>
+
+        <!--//-- Pharmacy tasks --//-->
+        <td>
+        [ ] Med teaching
+        <br>
+        </td>
+        
+        
+        <!--//-- MD tasks --//-->
+        <td>
+        [ ] Update med rec
+        <br>
+        [ ] Schedule f/u appt
+        <br>
+        </td>
+          <td></td>
+        
+        <!--<td><%= link_to 'View', patient %></td>-->
+          <td><a href=edit.html class="glyphicon glyphicon-edit"></a></td>
+          <td><a class="glyphicon glyphicon-trash"></a></td>
+        <!--<td>
+                <div class="btn-group" role="group" aria-label="...">
+            <a href="/leaveNote" class="btn btn-default btn-xs" >Add</button>
+            -->
+
+        </td>
+      </tr>
+    
+     <tr>
+        <td>423</td>
+        <td>IL</td>
+        <!--<td><%= patient.estimatedate %></td>-->
+        <td>"Y"</td>
+        
+        
+        <!--//-- CRC tasks --//-->
+        <td>
+        [ ] Home O2
+        </td>
+        
+        <!--//-- SW tasks --//-->
+        <td>
+        [ ] SNF/Psych/Rehab
+        </td>
+
+        <!--//-- Pharmacy tasks --//-->
+        <td>
+        </td>
+        
+        
+        <!--//-- MD tasks --//-->
+        <td>
+        [ ] Schedule f/u appt
+        </td>
+        
+        <td></td>
+        <!--<td><%= link_to 'View', patient %></td>-->
+          <td><a  href=edit.html class="glyphicon glyphicon-edit"></a></td>
+          <td><a class="glyphicon glyphicon-trash"></a></td>
+        <!--<td>
+                <div class="btn-group" role="group" aria-label="...">
+            <a href="/leaveNote" class="btn btn-default btn-xs" >Add</button>
+            -->
+
+        </td>
+      </tr>
+    
+     <tr>
+        <td>424</td>
+        <td>LO</td>
+        <!--<td><%= patient.estimatedate %></td>-->
+        <td>"Y"</td>
+        
+        
+        <!--//-- CRC tasks --//-->
+        <td>
+        </td>
+        
+        <!--//-- SW tasks --//-->
+        <td>
+        </td>
+
+        <!--//-- Pharmacy tasks --//-->
+        <td>
+        </td>
+        
+        
+        <!--//-- MD tasks --//-->
+        <td>
+        [ ] Tell pt about d/c at noon
+        <br>
+        </td>
+         
+        <td>Cultures returned positive, will need picc</td>
+        <!--<td><%= link_to 'View', patient %></td>-->
+          <td><a href=edit.html class="glyphicon glyphicon-edit"></a></td>
+          <td><a class="glyphicon glyphicon-trash"></a></td>
+        <!--<td>
+                <div class="btn-group" role="group" aria-label="...">
+            <a href="/leaveNote" class="btn btn-default btn-xs" >Add</button>
+            -->
+
+        </td>
+      </tr>
+
+
+
+ <tr>
+        <td>429</td>
+        <td>DD</td>
+        <!--<td><%= patient.estimatedate %></td>-->
+        <td>"Y"</td>
+        
+        
+        <!--//-- CRC tasks --//-->
+        <td>
+        [ ] Walker
+        <br>
+        [ ] Home care
+        <br>
+        [ ] Transportation
+        <br>
+        </td>
+        
+        <!--//-- SW tasks --//-->
+        <td>
+        </td>
+
+        <!--//-- Pharmacy tasks --//-->
+        <td>
+        </td>
+        
+        
+        <!--//-- MD tasks --//-->
+        <td>
+        [ ] Update med rec
+        <br>
+        [ ] Schedule f/u appt
+        </td>
+        
+        <td></td>
+        <!--<td><%= link_to 'View', patient %></td>-->
+          <td><a href=edit.html class="glyphicon glyphicon-edit"></a></td>
+          <td><a class="glyphicon glyphicon-trash"></a></td>
+        <!--<td>
+                <div class="btn-group" role="group" aria-label="...">
+            <a href="/leaveNote" class="btn btn-default btn-xs" >Add</button>
+            -->
+
+        </td>
+      </tr>
+    
+  <tr>
+        <td>430</td>
+        <td>KC</td>
+        <!--<td><%= patient.estimatedate %></td>-->
+        <td>"Y"</td>
+        
+        
+        <!--//-- CRC tasks --//-->
+        <td>
+        [ ] Transportation
+        </td>
+        
+        <!--//-- SW tasks --//-->
+        <td>
+        </td>
+
+        <!--//-- Pharmacy tasks --//-->
+        <td>
+        </td>
+        
+        
+        <!--//-- MD tasks --//-->
+        <td>
+        [ ] Tell pt about d/c at noon
+        </td>
+        
+        <td></td>
+        <!--<td><%= link_to 'View', patient %></td>-->
+          <td><a href=edit.html class="glyphicon glyphicon-edit"></a></td>
+          <td><a class="glyphicon glyphicon-trash"></a></td>
+        <!--<td>
+                <div class="btn-group" role="group" aria-label="...">
+            <a href="/leaveNote" class="btn btn-default btn-xs" >Add</button>
+            -->
+
+        </td>
+      </tr>
+    
+    <tr>
+        <td>450</td>
+        <td>JK</td>
+        <!--<td><%= patient.estimatedate %></td>-->
+        <td>"Y"</td>
+        
+        
+        <!--//-- CRC tasks --//-->
+        <td>
+        [ ] Home O2
+        <br>
+        [ ] Tube feeds
+        <br>
+        [ ] Walker
+        <br>
+        [ ] Other medical equipment
+        <br>
+        [ ] Home care
+        <br>
+        [ ] Transportation
+        <br>
+        </td>
+        
+        <!--//-- SW tasks --//-->
+        <td>
+        [ ] SNF/Psych/Rehab
+        </td>
+
+        <!--//-- Pharmacy tasks --//-->
+        <td>
+        [ ] Med teaching
+        <br>
+        [ ] Med financial assistance
+        <br>
+        [ ] Rx for concierge pharmacy service
+        <br>
+        </td>
+        
+        
+        <!--//-- MD tasks --//-->
+        <td>
+        [ ] Tell pt about d/c at noon
+        <br>
+        [ ] D/c summary
+        <br>
+        [ ] Update med rec
+        <br>
+        [ ] Schedule f/u appt
+        <br>
+        [ ] @10pm - put in AM labs for tomorrow
+        <br>
+        [ ] Put in PT order
+        </td>
+        
+        <td>Patient has not yet had PT eval, which is needed for placement</td>
+        <!--<td><%= link_to 'View', patient %></td>-->
+          <td><a href=edit.html class="glyphicon glyphicon-edit"></a></td>
+          <td><a class="glyphicon glyphicon-trash"></a></td>
+        <!--<td>
+                <div class="btn-group" role="group" aria-label="...">
+            <a href="/leaveNote" class="btn btn-default btn-xs" >Add</button>
+            -->
+
+        </td>
+      </tr>
+
+
+    
+    
+    
+  </tbody>
+</table>
+
+<br>
+<!--
+    <p align = "right"><a href="clearlist.html">Clear List</a></p>
+        
+-->
+<p align = "right">
+    <a href="clearlist.html">Clear List</a></p>
+<!--
+    <a onclick="myFunction()">Clear List</a>
+        </p>
+-->
+<!--
+    <script>
+    function myFunction() {
+    var x;
+    if (confirm("Are you sure? This clears the entire list.") == true) {
+        x = "You pressed OK!";
+    } else {
+        x = "You pressed Cancel!";
+    }
+</script>
+-->
+
+<br>
+
+<a class="btn btn-info" href="addnew.html">Add Patient Entry</a>
+
+<p><br></p>
+
+
+</div>
+
+
+
+<!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+
+</body>
+</html>

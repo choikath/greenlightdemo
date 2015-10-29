@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>D/C Checklist</title>
+  
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap.js"></script>
+    
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+</head>
+<body>
+<div class= "container">
+
+    <h3 align="left"><b>Discharge Checklists</b></h3>
+<p><i>-MD View-</i> &nbsp&nbsp&nbsp&nbsp&nbsp <i></i></p>
+    <p align = "right"><i>for d/c tomorrow: </i><i id="myDate" ></i></p>
+    <script>
+    var d = new Date(); document.getElementById("myDate").innerHTML = d.toDateString();
+    </script> 
+
+
+<table class="table table-hover" class="table table-condensed">
+  <thead>
+    <tr>
+      <th>New</th>
+      <th></th>
+      <th>Room</th>
+      <th>Patient(FL)</th>
+      <th>MD to-do:</th>
+      <th>PT rec:</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+          
+      </tr>
+      
+    
+  </tbody>
+</table>
+
+<br>
+<!--
+    <p align = "right"><a href="clearlist.html">Clear List</a></p>
+        
+-->
+
+
+</div>
+
+<script>
+    function myFunction() {
+    var x;
+    if (confirm("Are you sure? This clears the entire list.") == true) {
+        x = "You pressed OK!";
+    } else {
+        x = "You pressed Cancel!";
+    }
+</script>
+
+<!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+
+</body>
+</html>

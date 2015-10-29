@@ -1,0 +1,1 @@
+json.extract! @patient, :id, :room, :initials, :estimatedate, :ptnotified, :dcsumm, :medrec, :appt, :amlabs, :ptorder, :homeo2, :tubefeeds, :walker, :otherequip, :homecare, :snfpsych, :transport, :teaching, :finassit, :conciergerx, :completedbymd, :created_at, :updated_at
