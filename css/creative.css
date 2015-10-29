@@ -62,9 +62,9 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #568bb3;
   &:visited {
-    color: #222;
+    color: #474747;
   }
   &:hover {
     color: #939;
